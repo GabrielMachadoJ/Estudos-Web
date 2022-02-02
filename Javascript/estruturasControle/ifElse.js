@@ -8,4 +8,4 @@ const imprimirResultado = function(nota) {
 
 imprimirResultado(10)
 imprimirResultado(5)
-imprimirResultado('Epa!') // cuidado !!
+imprimirResultado('Epa!') // cuidado
