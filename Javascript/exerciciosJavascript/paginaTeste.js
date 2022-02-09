@@ -1,22 +1,23 @@
-function classificaAluno(nota) {
-    let notaCorrigida = arredondar(nota)
-    if (notaCorrigida >= 40) {
-        console.log(`Aprovado com nota ${notaCorrigida}`);
-    } else {
-        console.log(`Reprovado com nota ${notaCorrigida}`);
-    }
-}
+let stringPontuacoes = "10, 20, 20, 8, 25, 3, 0, 30, 1"
+ 
+ 
+function avaliaPontuacoes (stringPontuacoes) {
+    let pontuacoes = stringPontuacoes.split(", ")
+    let qtdQuebraDeRecords = 0
+    let piorJogo = 1
+    let maiorPontuacao = pontuacoes[0]
+    let menorPontuacao = pontuacoes[0]
 
-function arredondar (nota) {
-    if (nota % 5 > 2) {
-        return nota + (5 - (nota % 5))
-    } else {
-        return nota
+    for (let i = 1; i < pontuacoes.length; i++) {
+        if(pontuacoes[i] > maiorPontuacao) {
+            maiorPontuacao = pontuacoes[i]
+            qtdQuebraDeRecords++
+        }else if (pontuacoes[i] < menorPontuacao) {
+            menorPontuacao = pontuacoes[i]
+            piorJogo = i+1;
+        }
     }
+    return [qtdQuebraDeRecords, piorJogo]
 }
-
-classificaAluno(100)
-classificaAluno(30)
-classificaAluno(38)
-classificaAluno(88)
-classificaAluno(61)
+ 
+console.log(avaliaPontuacoes(stringPontuacoes))
