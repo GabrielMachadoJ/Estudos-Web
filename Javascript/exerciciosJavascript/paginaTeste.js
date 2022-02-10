@@ -1,23 +1,15 @@
-let stringPontuacoes = "10, 20, 20, 8, 25, 3, 0, 30, 1"
- 
- 
-function avaliaPontuacoes (stringPontuacoes) {
-    let pontuacoes = stringPontuacoes.split(", ")
-    let qtdQuebraDeRecords = 0
-    let piorJogo = 1
-    let maiorPontuacao = pontuacoes[0]
-    let menorPontuacao = pontuacoes[0]
+let pontos = "10, 20, 20, 8, 25, 3, 0, 30, 1"
 
-    for (let i = 1; i < pontuacoes.length; i++) {
-        if(pontuacoes[i] > maiorPontuacao) {
-            maiorPontuacao = pontuacoes[i]
-            qtdQuebraDeRecords++
-        }else if (pontuacoes[i] < menorPontuacao) {
-            menorPontuacao = pontuacoes[i]
-            piorJogo = i+1;
-        }
-    }
-    return [qtdQuebraDeRecords, piorJogo]
+function score(pontos) {
+    let pontuacao = pontos.split(", ")
+    return pontuacao   
 }
- 
-console.log(avaliaPontuacoes(stringPontuacoes))
+
+console.log(score(pontos))
+
+const ponto = [10, 20, 20, 8, 25, 3, 0, 30, 1]
+function score2(ponto) {
+    return ponto
+}
+
+console.log(score2(ponto))

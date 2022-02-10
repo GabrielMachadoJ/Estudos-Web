@@ -9,10 +9,10 @@ function score(pontos) {
     
 
     for(let i = 1; i < pontuacao.length; i++){
-        if(pontuacao[i] > maiorPonto) {
+        if(Number(pontuacao[i]) > Number(maiorPonto)) {
             maiorPonto = pontuacao[i]
             record++
-        } else if(pontuacao[i] < menorPonto) {
+        } else if(Number(pontuacao[i]) < Number(menorPonto)) {
             menorPonto = pontuacao[i]
             piorJogo = i + 1
 
