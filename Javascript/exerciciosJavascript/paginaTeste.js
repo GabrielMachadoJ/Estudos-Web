@@ -1,13 +1,21 @@
-function numerosNegativos (vetor) {
-    let qtdNegativos = 0
-    for(let i = 0; i < vetor.length; i++) {
-        if(vetor[i] < 0) {
-            qtdNegativos++
+function verificacaoDeString (string1, string2) {
+    let estaContido = true;
+    for (let i = 0; i < string1.length; i++) {
+        let caractereString1 = string1.charAt(i).toLowerCase()
+        for(let j = 0; j < string2.length; j++){
+            let caractereString2 = string2.charAt(j).toLowerCase()
+            if(caractereString1 == caractereString2) {
+                estaContido = true
+                break
+            } else {
+                estaContido = false
+            }
+        }
+        if(!estaContido) {
+            return estaContido
         }
     }
-    return qtdNegativos
-}
+    return estaContido
+ }
 
-vetor =  [10, 5, -7, 3, -1, 3, -11, -20, 6, 9]
-
-console.log(numerosNegativos(vetor))
+ console.log(verificacaoDeString('subixno', 'onibasaaus'))
