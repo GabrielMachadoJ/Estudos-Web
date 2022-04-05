@@ -1,10 +1,10 @@
-Array.prototype.map = function(callback) {
+Array.prototype.map2 = function(callback) {
+    const newArray = []
     for(let i = 0; i < this.length; i++) {
-        callback(this[i], i, this)
+        newArray.push(callback(this[i], i, this))
     }
+    return newArray
 }
-
-
 
 const carrinho = [
     '{"nome": "Borracha", "preco": 3.45}',
